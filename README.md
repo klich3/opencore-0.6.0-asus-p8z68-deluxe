@@ -2,6 +2,8 @@
 
 ## Introduction
 
+Bios: Last version 
+
 OPEN CORE 0.6.0 RELEASE efi for ASUS P8Z68 - DELUXE Hackintosh Catalina 10.15.6.
 
 CPU: i7-2600 3.40Ghz (intel: Sundy Bride)
@@ -9,7 +11,7 @@ RAM: 12GB DDR3
 
 GEFORCE GTX 770
 
-![Image of p8z68] (https://www.tonymacx86.com/data/attachments/282/282583-20d32b05bfa8b70f7f033e5570532cc0.jpg)
+![Preview](https://www.tonymacx86.com/data/attachments/282/282583-20d32b05bfa8b70f7f033e5570532cc0.jpg)
 
 ## Bios
 
@@ -69,10 +71,61 @@ GEFORCE GTX 770
 
 - Keyboard & Trackpad
 - USB 2.0 + 3.0
-- Audio ALC892
+- Audio ALC892 (can change 4 outputs)
 - VGA + HDMI (Dual monitor)
-- LAN Internal RealtekRTL8111
+- LAN x2 Internal RealtekRTL8111
+- USB 2.0
+- USB 3.0
+- USB 3.1 +
 
 ## What doesn't work
 
-- Testing
+- Bluetooth on motherboard
+
+## Post Install
+
+- With Colover -> write EFI
+- Copy files and decor it...
+- I put new folder (After install) with other kexts, what I use
+- Add SMBIOS, Serials and other stuff
+
+## TODO
+
+- Downgrade bios version for test boost cfg (Folder TODO)
+
+
+## After Update to 10.15.6
+
+Probably you have kernel Panic and poker face :P
+
+![Screenshot](images/IMG_3986.jpg)
+
+In message look on line where saying Kernel Extensions in backtrace:
+	probably you have com.apple.driver.AppleAHCIPort panic
+	
+	- reboot
+	- Use usb for boot or if EFI working boot recovery partition.
+	- Open terminal and go to you install disk
+	
+	- see your disk partitions
+	- ~ df
+	- go to kext folder
+	- ~ /Volumes/<OSX>/Library/Extensions/
+	- ls -l
+	- look if you see something like panic message AppleAHCIPortHotplug.kext
+	- you can moved it to other folder or delete
+	- ~ rm AppleAHCIPortHotplug.kext
+	- now you need restore permissions
+	- ~ chmod -Rf 766 /Volumes/<OSX>/S*/L*/E*
+	- ~ chmod -Rf 766 /Volumes/<OSX>/L*/E*
+	- and now rebuild kext cache
+	- ~ kextcache -i /Volumes/<OSX>
+	- ~ reboot
+	
+Thats it!
+Finally boot normal, and use Hackintool
+
+![Screenshot](images/catalina10156.png)
+
+
+
