@@ -75,8 +75,12 @@ GEFORCE GTX 770
 - VGA + HDMI (Dual monitor)
 - LAN x2 Internal RealtekRTL8111
 - USB 2.0
-- USB 3.0
+- USB 3.0 (Inertnal on motherboard)
 - USB 3.1 +
+- TurboBoost
+- GPU Acceleration
+- NVMe on AGP port (PCI-e)
+- BCM4933 Native working wifi + bt (airdrop)
 
 ## What doesn't work
 
