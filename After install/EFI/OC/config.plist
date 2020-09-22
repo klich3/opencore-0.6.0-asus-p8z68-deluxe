@@ -36,23 +36,7 @@
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
-				<string>SSDT-IMEI.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string></string>
-				<key>Enabled</key>
-				<true/>
-				<key>Path</key>
 				<string>SSDT-PLUG.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string></string>
-				<key>Enabled</key>
-				<false/>
-				<key>Path</key>
-				<string>SSDT-PM.aml</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
@@ -74,9 +58,9 @@
 				<key>Comment</key>
 				<string></string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Path</key>
-				<string>SSDT.aml</string>
+				<string>ssdt_data.aml</string>
 			</dict>
 		</array>
 		<key>Delete</key>
@@ -208,7 +192,7 @@
 			<key>DisableVariableWrite</key>
 			<false/>
 			<key>DiscardHibernateMap</key>
-			<true/>
+			<false/>
 			<key>EnableSafeModeSlide</key>
 			<true/>
 			<key>EnableWriteUnprotector</key>
@@ -237,6 +221,33 @@
 	<dict>
 		<key>Add</key>
 		<dict>
+			<key>PciRoot(0x0)/Pci(0x0,0x0)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Internal@0,0,0</string>
+				<key>device_type</key>
+				<string>Host bridge</string>
+				<key>model</key>
+				<string>2nd Generation Core Processor Family DRAM Controller</string>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x1,0x0)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Internal@0,1,0</string>
+				<key>device_type</key>
+				<string>PCI bridge</string>
+				<key>model</key>
+				<string>Xeon E3-1200/2nd Generation Core Processor Family PCI Express Root Port</string>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x1,0x1)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Internal@0,1,1</string>
+				<key>device_type</key>
+				<string>PCI bridge</string>
+				<key>model</key>
+				<string>Xeon E3-1200/2nd Generation Core Processor Family PCI Express Root Port</string>
+			</dict>
 			<key>PciRoot(0x0)/Pci(0x16,0x0)</key>
 			<dict>
 				<key>AAPL,slot-name</key>
@@ -270,10 +281,48 @@
 				<string>Internal@0,27,0</string>
 				<key>device_type</key>
 				<string>Audio device</string>
+				<key>hda-gfx</key>
+				<string>onboard-2</string>
 				<key>layout-id</key>
-				<data>ABACAg==</data>
+				<data>AQAAAA==</data>
 				<key>model</key>
-				<string>7 Series/C216 Chipset Family High Definition Audio Controller</string>
+				<string>6 Series/C200 Series Chipset Family High Definition Audio Controller</string>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x1C,0x0)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Internal@0,28,0</string>
+				<key>device_type</key>
+				<string>PCI bridge</string>
+				<key>model</key>
+				<string>6 Series/C200 Series Chipset Family PCI Express Root Port 1</string>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x1C,0x4)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Internal@0,28,4</string>
+				<key>device_type</key>
+				<string>PCI bridge</string>
+				<key>model</key>
+				<string>6 Series/C200 Series Chipset Family PCI Express Root Port 5</string>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x1C,0x4)/Pci(0x0,0x0)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Internal@0,28,4/0,0</string>
+				<key>device_type</key>
+				<string>USB controller</string>
+				<key>model</key>
+				<string>uPD720200 USB 3.0 Host Controller</string>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x1C,0x6)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Internal@0,28,6</string>
+				<key>device_type</key>
+				<string>PCI bridge</string>
+				<key>model</key>
+				<string>6 Series/C200 Series Chipset Family PCI Express Root Port 7</string>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x1C,0x6)/Pci(0x0,0x0)</key>
 			<dict>
@@ -286,8 +335,30 @@
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x1C,0x7)</key>
 			<dict>
-				<key>built-in</key>
-				<data>AQAAAA==</data>
+				<key>AAPL,slot-name</key>
+				<string>Internal@0,28,7</string>
+				<key>device_type</key>
+				<string>PCI bridge</string>
+				<key>model</key>
+				<string>6 Series/C200 Series Chipset Family PCI Express Root Port 8</string>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x1C,0x7)/Pci(0x0,0x0)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Internal@0,28,7/0,0</string>
+				<key>device_type</key>
+				<string>PCI bridge</string>
+				<key>model</key>
+				<string>PEX 8608 8-lane, 8-Port PCI Express Gen 2 (5.0 GT/s) Switch</string>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x1C,0x7)/Pci(0x0,0x0)/Pci(0x1,0x0)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Internal@0,28,7/0,0/1,0</string>
+				<key>device_type</key>
+				<string>PCI bridge</string>
+				<key>model</key>
+				<string>PEX 8608 8-lane, 8-Port PCI Express Gen 2 (5.0 GT/s) Switch</string>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x1C,0x7)/Pci(0x0,0x0)/Pci(0x1,0x0)/Pci(0x0,0x0)</key>
 			<dict>
@@ -298,6 +369,24 @@
 				<key>model</key>
 				<string>VT6315 Series Firewire Controller</string>
 			</dict>
+			<key>PciRoot(0x0)/Pci(0x1C,0x7)/Pci(0x0,0x0)/Pci(0x4,0x0)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Internal@0,28,7/0,0/4,0</string>
+				<key>device_type</key>
+				<string>PCI bridge</string>
+				<key>model</key>
+				<string>PEX 8608 8-lane, 8-Port PCI Express Gen 2 (5.0 GT/s) Switch</string>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x1C,0x7)/Pci(0x0,0x0)/Pci(0x5,0x0)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Internal@0,28,7/0,0/5,0</string>
+				<key>device_type</key>
+				<string>PCI bridge</string>
+				<key>model</key>
+				<string>PEX 8608 8-lane, 8-Port PCI Express Gen 2 (5.0 GT/s) Switch</string>
+			</dict>
 			<key>PciRoot(0x0)/Pci(0x1C,0x7)/Pci(0x0,0x0)/Pci(0x5,0x0)/Pci(0x0,0x0)</key>
 			<dict>
 				<key>AAPL,slot-name</key>
@@ -307,6 +396,33 @@
 				<key>model</key>
 				<string>JMB362 SATA Controller</string>
 			</dict>
+			<key>PciRoot(0x0)/Pci(0x1C,0x7)/Pci(0x0,0x0)/Pci(0x6,0x0)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Internal@0,28,7/0,0/6,0</string>
+				<key>device_type</key>
+				<string>PCI bridge</string>
+				<key>model</key>
+				<string>PEX 8608 8-lane, 8-Port PCI Express Gen 2 (5.0 GT/s) Switch</string>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x1C,0x7)/Pci(0x0,0x0)/Pci(0x6,0x0)/Pci(0x0,0x0)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Internal@0,28,7/0,0/6,0/0,0</string>
+				<key>device_type</key>
+				<string>SATA controller</string>
+				<key>model</key>
+				<string>88SE9128 PCIe SATA 6 Gb/s RAID controller with HyperDuo</string>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x1C,0x7)/Pci(0x0,0x0)/Pci(0x7,0x0)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Internal@0,28,7/0,0/7,0</string>
+				<key>device_type</key>
+				<string>PCI bridge</string>
+				<key>model</key>
+				<string>PEX 8608 8-lane, 8-Port PCI Express Gen 2 (5.0 GT/s) Switch</string>
+			</dict>
 			<key>PciRoot(0x0)/Pci(0x1C,0x7)/Pci(0x0,0x0)/Pci(0x7,0x0)/Pci(0x0,0x0)</key>
 			<dict>
 				<key>AAPL,slot-name</key>
@@ -315,6 +431,15 @@
 				<string>Network controller</string>
 				<key>model</key>
 				<string>BCM4360 802.11ac Wireless Network Adapter</string>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x1C,0x7)/Pci(0x0,0x0)/Pci(0x8,0x0)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Internal@0,28,7/0,0/8,0</string>
+				<key>device_type</key>
+				<string>PCI bridge</string>
+				<key>model</key>
+				<string>PEX 8608 8-lane, 8-Port PCI Express Gen 2 (5.0 GT/s) Switch</string>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x1C,0x7)/Pci(0x0,0x0)/Pci(0x8,0x0)/Pci(0x0,0x0)</key>
 			<dict>
@@ -333,6 +458,15 @@
 				<string>Network controller</string>
 				<key>model</key>
 				<string>RT3060 Wireless 802.11n 1T/1R</string>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x1C,0x7)/Pci(0x0,0x0)/Pci(0x9,0x0)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Internal@0,28,7/0,0/9,0</string>
+				<key>device_type</key>
+				<string>PCI bridge</string>
+				<key>model</key>
+				<string>PEX 8608 8-lane, 8-Port PCI Express Gen 2 (5.0 GT/s) Switch</string>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x1C,0x7)/Pci(0x0,0x0)/Pci(0x9,0x0)/Pci(0x0,0x0)</key>
 			<dict>
@@ -379,6 +513,17 @@
 				<key>model</key>
 				<string>6 Series/C200 Series Chipset Family SMBus Controller</string>
 			</dict>
+			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Internal@0,2,0</string>
+				<key>device_type</key>
+				<string>Display controller</string>
+				<key>hda-gfx</key>
+				<string>onboard-1</string>
+				<key>model</key>
+				<string>Intel 2nd Generation Core Processor Family Integrated Graphics Controller</string>
+			</dict>
 		</dict>
 		<key>Delete</key>
 		<dict/>
@@ -405,6 +550,22 @@
 			</dict>
 			<dict>
 				<key>BundlePath</key>
+				<string>VirtualSMC.kext</string>
+				<key>Comment</key>
+				<string></string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/VirtualSMC</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>BundlePath</key>
 				<string>AirPortBrcm4360.kext</string>
 				<key>Comment</key>
 				<string></string>
@@ -421,59 +582,11 @@
 			</dict>
 			<dict>
 				<key>BundlePath</key>
-				<string>BrcmFirmwareRepo.kext</string>
-				<key>Comment</key>
-				<string></string>
-				<key>Enabled</key>
-				<false/>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/BrcmFirmwareRepo</string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>BundlePath</key>
-				<string>BrcmNonPatchRAM2.kext</string>
-				<key>Comment</key>
-				<string></string>
-				<key>Enabled</key>
-				<false/>
-				<key>ExecutablePath</key>
-				<string></string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>BundlePath</key>
-				<string>BrcmPatchRAM2.kext</string>
-				<key>Comment</key>
-				<string></string>
-				<key>Enabled</key>
-				<false/>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/BrcmPatchRAM2</string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>BundlePath</key>
 				<string>AirportBrcmFixup.kext</string>
 				<key>Comment</key>
 				<string></string>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/AirportBrcmFixup</string>
 				<key>MaxKernel</key>
@@ -501,134 +614,6 @@
 			</dict>
 			<dict>
 				<key>BundlePath</key>
-				<string>AirportBrcmFixup.kext/Contents/PlugIns/AirPortBrcmNIC_Injector.kext</string>
-				<key>Comment</key>
-				<string></string>
-				<key>Enabled</key>
-				<false/>
-				<key>ExecutablePath</key>
-				<string></string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>BundlePath</key>
-				<string>WhateverGreen.kext</string>
-				<key>Comment</key>
-				<string></string>
-				<key>Enabled</key>
-				<true/>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/WhateverGreen</string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>BundlePath</key>
-				<string>FakeSMC.kext</string>
-				<key>Comment</key>
-				<string></string>
-				<key>Enabled</key>
-				<true/>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/FakeSMC</string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>BundlePath</key>
-				<string>FakeSMC_ACPISensors.kext</string>
-				<key>Comment</key>
-				<string></string>
-				<key>Enabled</key>
-				<true/>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/ACPISensors</string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>BundlePath</key>
-				<string>FakeSMC_CPUSensors.kext</string>
-				<key>Comment</key>
-				<string></string>
-				<key>Enabled</key>
-				<true/>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/CPUSensors</string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>BundlePath</key>
-				<string>FakeSMC_GPUSensors.kext</string>
-				<key>Comment</key>
-				<string></string>
-				<key>Enabled</key>
-				<true/>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/GPUSensors</string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>BundlePath</key>
-				<string>FakeSMC_LPCSensors.kext</string>
-				<key>Comment</key>
-				<string></string>
-				<key>Enabled</key>
-				<true/>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/LPCSensors</string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>BundlePath</key>
-				<string>FakeSMC_SMMSensors.kext</string>
-				<key>Comment</key>
-				<string></string>
-				<key>Enabled</key>
-				<true/>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/SMMSensors</string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>BundlePath</key>
 				<string>CPUFriend.kext</string>
 				<key>Comment</key>
 				<string></string>
@@ -645,13 +630,13 @@
 			</dict>
 			<dict>
 				<key>BundlePath</key>
-				<string>USBInjectAll.kext</string>
+				<string>CPUFriendDataProvider.kext</string>
 				<key>Comment</key>
 				<string></string>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>ExecutablePath</key>
-				<string>Contents/MacOS/USBInjectAll</string>
+				<string></string>
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
@@ -661,7 +646,23 @@
 			</dict>
 			<dict>
 				<key>BundlePath</key>
-				<string>USBPorts.kext</string>
+				<string>AppleIntelE1000e.kext</string>
+				<key>Comment</key>
+				<string></string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/AppleIntelE1000e</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>BundlePath</key>
+				<string>AirportBrcmFixup.kext/Contents/PlugIns/AirPortBrcmNIC_Injector.kext</string>
 				<key>Comment</key>
 				<string></string>
 				<key>Enabled</key>
@@ -693,13 +694,45 @@
 			</dict>
 			<dict>
 				<key>BundlePath</key>
-				<string>AppleIntelE1000e.kext</string>
+				<string>BrcmFirmwareRepo.kext</string>
 				<key>Comment</key>
 				<string></string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
-				<string>Contents/MacOS/AppleIntelE1000e</string>
+				<string>Contents/MacOS/BrcmFirmwareRepo</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>BundlePath</key>
+				<string>BrcmNonPatchRAM2.kext</string>
+				<key>Comment</key>
+				<string></string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string></string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>BundlePath</key>
+				<string>JMicron36xAHCIEnabler.kext</string>
+				<key>Comment</key>
+				<string></string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/JMicron36xAHCIEnabler</string>
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
@@ -732,6 +765,38 @@
 				<true/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/RealtekRTL8111</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>BundlePath</key>
+				<string>USBPorts.kext</string>
+				<key>Comment</key>
+				<string></string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string></string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>BundlePath</key>
+				<string>WhateverGreen.kext</string>
+				<key>Comment</key>
+				<string></string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/WhateverGreen</string>
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
@@ -787,118 +852,6 @@
 				<string></string>
 				<key>Replace</key>
 				<data>AAAAAAAAAAAAAAA=</data>
-				<key>ReplaceMask</key>
-				<data></data>
-				<key>Skip</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>Base</key>
-				<string></string>
-				<key>Comment</key>
-				<string>USB port limit patch #1 10.15.x modify by DalianSky(credit ydeng)</string>
-				<key>Count</key>
-				<integer>0</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>4IP7Dw8=</data>
-				<key>Identifier</key>
-				<string></string>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data></data>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>Replace</key>
-				<data>4IP7Pw8=</data>
-				<key>ReplaceMask</key>
-				<data></data>
-				<key>Skip</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>Base</key>
-				<string></string>
-				<key>Comment</key>
-				<string>USB Port limit patch #2 10.15.x modify by DalianSky(credits PMheart)</string>
-				<key>Count</key>
-				<integer>0</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>QYP5Dw8=</data>
-				<key>Identifier</key>
-				<string></string>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data></data>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>Replace</key>
-				<data>QYP5Pw8=</data>
-				<key>ReplaceMask</key>
-				<data></data>
-				<key>Skip</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>Base</key>
-				<string></string>
-				<key>Comment</key>
-				<string>USB Port limit patch #1/2 10.15.x (credit DalianSky)</string>
-				<key>Count</key>
-				<integer>0</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>g/sPDw==</data>
-				<key>Identifier</key>
-				<string>com.apple.iokit.IOUSBHostFamily</string>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data></data>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>Replace</key>
-				<data>g/s/Dw==</data>
-				<key>ReplaceMask</key>
-				<data></data>
-				<key>Skip</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>Base</key>
-				<string></string>
-				<key>Comment</key>
-				<string>USB Port limit patch #2/2 10.15.x (credit DalianSky)</string>
-				<key>Count</key>
-				<integer>0</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>g/kPDw==</data>
-				<key>Identifier</key>
-				<string>com.apple.driver.usb.AppleUSBXHCI</string>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data></data>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>Replace</key>
-				<data>g/k/Dw==</data>
 				<key>ReplaceMask</key>
 				<data></data>
 				<key>Skip</key>
@@ -1274,67 +1227,23 @@
 	<key>PlatformInfo</key>
 	<dict>
 		<key>Automatic</key>
-		<false/>
-		<key>DataHub</key>
-		<dict>
-			<key>ARTFrequency</key>
-			<integer>0</integer>
-			<key>BoardProduct</key>
-			<string>Mac-FC02E91DDD3FA6A4</string>
-			<key>BoardRevision</key>
-			<data></data>
-			<key>DevicePathsSupported</key>
-			<integer>0</integer>
-			<key>FSBFrequency</key>
-			<integer>0</integer>
-			<key>InitialTSC</key>
-			<integer>0</integer>
-			<key>PlatformName</key>
-			<string></string>
-			<key>SmcBranch</key>
-			<data>ZDgAAAAAAAA=</data>
-			<key>SmcPlatform</key>
-			<data>ZDgAAAAAAAA=</data>
-			<key>SmcRevision</key>
-			<data>AhEPAAAW</data>
-			<key>StartupPowerEvents</key>
-			<integer>0</integer>
-			<key>SystemProductName</key>
-			<string>iMac13,2</string>
-			<key>SystemSerialNumber</key>
-			<string>C02HKUZKDNCW</string>
-			<key>SystemUUID</key>
-			<string>30478D1E-E995-4B89-A046-9A6F20FED71F</string>
-		</dict>
+		<true/>
 		<key>Generic</key>
 		<dict>
 			<key>AdviseWindows</key>
 			<false/>
 			<key>MLB</key>
-			<string>C02215104GUF2FRA8</string>
+			<string>C02230108GUF2FRCB</string>
 			<key>ROM</key>
-			<data>FNrpAU4k</data>
+			<data>lqqqhuDC</data>
 			<key>SpoofVendor</key>
 			<true/>
 			<key>SystemProductName</key>
 			<string>iMac13,2</string>
 			<key>SystemSerialNumber</key>
-			<string>C02HKUZKDNCW</string>
+			<string>C02J40AADNCW</string>
 			<key>SystemUUID</key>
-			<string>30478D1E-E995-4B89-A046-9A6F20FED71F</string>
-		</dict>
-		<key>PlatformNVRAM</key>
-		<dict>
-			<key>BID</key>
-			<string>Mac-FC02E91DDD3FA6A4</string>
-			<key>FirmwareFeatures</key>
-			<data>N+EN4AAAAAA=</data>
-			<key>FirmwareFeaturesMask</key>
-			<data>P/8f/wAAAAA=</data>
-			<key>MLB</key>
-			<string>C02215104GUF2FRA8</string>
-			<key>ROM</key>
-			<data>FNrpAU4k</data>
+			<string>570582E8-DB2A-4C43-B4A2-5D7CA8E3E9D9</string>
 		</dict>
 		<key>UpdateDataHub</key>
 		<true/>
@@ -1343,7 +1252,7 @@
 		<key>UpdateSMBIOS</key>
 		<true/>
 		<key>UpdateSMBIOSMode</key>
-		<string>Custom</string>
+		<string>Auto</string>
 	</dict>
 	<key>UEFI</key>
 	<dict>
