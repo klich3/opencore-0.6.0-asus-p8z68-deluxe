@@ -70,12 +70,11 @@ GEFORCE GTX 770
 ## What works
 
 - Keyboard & Trackpad
-- USB 2.0 + 3.0
 - Audio ALC892 (can change 4 outputs)
 - VGA + HDMI (Dual monitor)
 - LAN x2 Internal RealtekRTL8111
 - USB 2.0
-- USB 3.0 (Inertnal on motherboard)
+- USB 3.0 (Inertnal on motherboard) + 2 blue on back 
 - USB 3.1 +
 - TurboBoost
 - GPU Acceleration
@@ -93,9 +92,9 @@ GEFORCE GTX 770
 - I put new folder (After install) with other kexts, what I use
 - Add SMBIOS, Serials and other stuff
 
-## TODO
+## BIOS
 
-- Downgrade bios version for test boost cfg (Folder TODO)
+- BIOS update for support NVMe on PCI-e
 
 
 ## After Update to 10.15.6
